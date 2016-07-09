@@ -12,6 +12,8 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    final int PERMISSIONS_REQUEST_CODE=100;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         switch (requestCode) {
-            case PERMISSIONS_REQUEST_CODE;
+            case PERMISSIONS_REQUEST_CODE:
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     Log.d("PERMISSION_TEST", "granted");
                 } else {
